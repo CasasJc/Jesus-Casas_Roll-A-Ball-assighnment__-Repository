@@ -2,6 +2,8 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - CamraController
+    - Enemy_Rotate
+    - Object_Mover
     - PlayerController
     - Rotator
     Unity.InputSystem.dll:
@@ -75,28 +77,34 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12822}
     - Class: 114
-      Script: {instanceID: 13394}
+      Script: {instanceID: 13034}
     - Class: 114
-      Script: {instanceID: 13522}
+      Script: {instanceID: 13396}
     - Class: 114
-      Script: {instanceID: 13540}
+      Script: {instanceID: 13476}
     - Class: 114
-      Script: {instanceID: 13558}
+      Script: {instanceID: 13526}
     - Class: 114
-      Script: {instanceID: 13760}
+      Script: {instanceID: 13544}
     - Class: 114
-      Script: {instanceID: 13802}
+      Script: {instanceID: 13562}
     - Class: 114
-      Script: {instanceID: 13882}
+      Script: {instanceID: 13764}
     - Class: 114
-      Script: {instanceID: 14090}
+      Script: {instanceID: 13806}
     - Class: 114
-      Script: {instanceID: 14156}
+      Script: {instanceID: 13886}
+    - Class: 114
+      Script: {instanceID: 14094}
+    - Class: 114
+      Script: {instanceID: 14160}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
     - Class: 135
+      Script: {instanceID: 0}
+    - Class: 136
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -425,6 +433,12 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAnimator
   - hash:
       serializedVersion: 2
+      Hash: e08dc097b830ae769e9cdd9b04e903ac
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Object_Mover
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
@@ -503,6 +517,12 @@ ScriptsOnlyBuild:
     className: InputDeviceDebuggerWindow
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Enemy_Rotate
+  - hash:
+      serializedVersion: 2
       Hash: f7bb6096199e0cf058d5d69878184cf4
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -551,7 +571,7 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
-      Hash: fde8ba8986b0702fbadeffa5b584f0e2
+      Hash: 8ba217136733d23bd0fe2b5a889c7140
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
@@ -726,5 +746,5 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/minigame.unity
-  playerPath: C:/Users/casas/Documents/ucf stuff/Unity stuff/roll a ball project/Build/roll
-    a ball project.exe
+  playerPath: C:/Users/casas/Documents/ucf stuff/unity builds/Roll a ball challenge
+    build/roll a ball project.exe

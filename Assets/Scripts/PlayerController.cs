@@ -10,6 +10,10 @@ public class PlayerController : MonoBehaviour
     public TextMeshProUGUI countText;
     public GameObject winTextObject;
 
+    public TextMeshProUGUI LivesText;
+    public GameObject loseTextObject;
+
+    private int lives;
     private Rigidbody rb;
     private int count;
     private float movementX;
@@ -24,6 +28,10 @@ public class PlayerController : MonoBehaviour
 
         SetCountText();
         winTextObject.SetActive(false);
+
+        lives = 3;
+        SetLivesText();
+        loseTextObject.SetActive(false);
     }
 
 
@@ -38,9 +46,18 @@ public class PlayerController : MonoBehaviour
     void SetCountText()
     {
         countText.text = "count: " + count.ToString();
-        if(count >= 12)
+        if (count >= 20)
         {
             winTextObject.SetActive(true);
+        }
+    }
+
+    void SetLivesText()
+    {
+        LivesText.text = "lives: " + lives.ToString();
+        if (lives <=0)
+        {
+            loseTextObject.SetActive(true);
         }
     }
 
@@ -57,8 +74,26 @@ public class PlayerController : MonoBehaviour
             other.gameObject.SetActive(false);
             count = count + 1;
 
-            SetCountText(); 
+            SetCountText();
         }
-        
+
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            other.gameObject.SetActive(false);
+            lives = lives - 1;
+
+            SetLivesText();
+        }
+
+        if (count == 12)
+        {
+            transform.position = new Vector3 (63.0f, 0.0f, 56.0f);
+        }
+
+        if (lives == 0)
+        {
+            Destroy(gameObject);
+        }
+
     }
 }
